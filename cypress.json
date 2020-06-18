@@ -1,0 +1,17 @@
+{
+  "projectId": "cypress-poc",
+  "baseUrl": "http://udon-sites001.dev.questionsanswered.net/",
+  "coverageFolder": "coverage",
+  "screenshotsFolder": "cypress/reports",
+  "video": false,
+  "trashAssetsBeforeRuns": true,
+  "reporter": "mochawesome",
+  "reporterOptions": {
+    "charts": true,
+    "html": false,
+    "json": true,
+    "reportDir": "cypress/reports/mochawesome",
+    "reportFilename": "report",
+    "overwrite": false
+  }
+}
