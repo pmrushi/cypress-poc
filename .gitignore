@@ -16,3 +16,4 @@ package-lock.json
 yarn.lock
 cypress/reports/
 cypress/videos/
+reports/

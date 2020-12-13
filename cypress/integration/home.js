@@ -1,8 +1,8 @@
-describe("Testing of Cypress page ", () => {
+describe("Testing of Cypress page", () => {
 
     it("Verify navigation to the correct URL", () => {
         cy.visit(`https://cypress.io/features`);
-        cy.location("pathname").should('eq', '/features/');
+        cy.location("pathname").should('eq', '/features123/');
     });
 
     /*it("Count of number of links displayed", function() {

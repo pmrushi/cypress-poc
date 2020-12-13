@@ -4,14 +4,19 @@
   "coverageFolder": "coverage",
   "screenshotsFolder": "cypress/reports",
   "video": true,
+  "videosFolder": "cypress/reports",
   "trashAssetsBeforeRuns": true,
   "reporter": "mochawesome",
+  "chromeWebSecurity": false,
   "reporterOptions": {
     "charts": true,
     "html": false,
     "json": true,
     "reportDir": "cypress/reports/mochawesome",
     "reportFilename": "report",
-    "overwrite": false
+    "overwrite": false,
+    "inline": true,
+    "inlineAssets": true,
+    "timestamp": "dd-mmm-yyyy-HH-MM-ss"
   }
 }

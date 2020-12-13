@@ -1,4 +1,3 @@
-// ***********************************************************
 // This example support/index.js is processed and
 // loaded automatically before your test files.
 //
@@ -11,7 +10,7 @@
 //
 // You can read more here:
 // https://on.cypress.io/configuration
-// ***********************************************************
+
 import addContext from 'mochawesome/addContext'
 
 // Import commands.js using ES2015 syntax:
@@ -21,28 +20,11 @@ import './commands'
 // require('./commands')
 
 Cypress.on('test:after:run', (test, runnable) => {
-
     if (test.state === 'failed') {
-        let item = runnable
-        const nameParts = [runnable.title]
-
-        while (item.parent) {
-            nameParts.unshift(item.parent.title)
-            item = item.parent
-        }
-
-        if (runnable.hookName) {
-            nameParts.push(`${runnable.hookName} hook`)
-        }
-
-        const fullTestName = nameParts
-            .filter(Boolean)
-            .join(' -- ')
-
-        const imageUrl = `${
-            Cypress.spec.name
-        }/${fullTestName} (failed).png`
-
-        addContext({test}, imageUrl)
+        let screenshotFileName = `${runnable.parent.title} -- ${test.title} (failed).png`;
+        let imageUrl = `${Cypress.spec.name}/${screenshotFileName}`;
+        let videUrl = `${Cypress.spec.name}.mp4`;
+        addContext({test}, imageUrl);
+        addContext({test}, videUrl);
     }
-})
+});
