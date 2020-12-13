@@ -1,9 +1,9 @@
 {
   "projectId": "cypress-poc",
-  "baseUrl": "http://udon-sites001.dev.questionsanswered.net/",
+  "baseUrl": "https://google.co.in/",
   "coverageFolder": "coverage",
   "screenshotsFolder": "cypress/reports",
-  "video": false,
+  "video": true,
   "trashAssetsBeforeRuns": true,
   "reporter": "mochawesome",
   "reporterOptions": {

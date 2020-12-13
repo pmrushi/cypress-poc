@@ -1,13 +1,13 @@
-describe("Testing of partial-search-results component 1", function() {
+describe("Testing of Cypress page ", () => {
 
-    it("Verify navigation to the correct URL", function(){
-        cy.visit(`searchResults`);
-        cy.location("pathname").should("eq", "/searchResults");
+    it("Verify navigation to the correct URL", () => {
+        cy.visit(`https://cypress.io/features`);
+        cy.location("pathname").should('eq', '/features/');
     });
 
-    it("Count of number of links displayed", function() {
+    /*it("Count of number of links displayed", function() {
         const links = cy.get('.PartialSearchResults-results>.PartialSearchResults-item');
         links.should("have.length", 81);
     });
-
+*/
 });
